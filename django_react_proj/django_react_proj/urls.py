@@ -16,8 +16,16 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+
+from students import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
+
+    # The first endpoint will handle both creations (POST) and listing (GET).
+    re_path(r'^api/students/$', views.students_list),
+
+    #The second one will remove (DELETE) or update (PUT) the data of a single student.
+    re_path(r'^api/students/([0-9])$', views.students_detail)
 ]

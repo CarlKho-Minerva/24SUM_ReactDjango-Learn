@@ -1,0 +1,35 @@
+logrocket_env/
+
+# Django
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.log
+*.pot
+*.mo
+*.so
+db.sqlite3
+media
+
+# React
+node_modules/
+/build/
+.npm
+.npmrc
+yarn-error.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
